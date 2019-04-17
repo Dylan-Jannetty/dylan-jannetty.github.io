@@ -31,6 +31,17 @@
 			background-color: transparentize(_palette(bg), 0.15);
 			border-radius: _size(border-radius);
 			opacity: 0;
+			
+			.aboutIMG {
+				height: 350px;
+				width: 350px;
+				display: flex;
+				flex-flow: row;
+				margin-left: 10em;
+				margin-bottom: 3em;
+				border-radius: 5px;
+				border: 2px black solid;
+			}
 
 			&.timeout {
 				display: none;
@@ -90,6 +101,11 @@
 
 		@include breakpoint(small) {
 			article {
+				.aboutIMG {
+					height: 300px;
+					width: 300px;
+					margin-left: 0em;
+				}
 				@include padding(2rem, 2rem, (1.5rem, 0, 0.5rem, 0));
 				.close {
 					&:before {

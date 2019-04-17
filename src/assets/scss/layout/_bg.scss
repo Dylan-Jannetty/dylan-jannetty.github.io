@@ -41,12 +41,12 @@
 		}
 
 		&:after {
-			@include vendor('transform', 'scale(1.125)');
+			// @include vendor('transform', 'scale(1.125)');
 			@include vendor('transition', (
 				'transform #{_duration(article)} ease-in-out',
 				'filter #{_duration(article)} ease-in-out'
 			));
-			background-image:		url('../../images/bg.jpg');
+			background-image:		url('../../images/homeIMG.jpg');
 			background-position:	center;
 			background-size:		cover;
 			background-repeat:		no-repeat;
