@@ -58,7 +58,7 @@ class Main extends React.Component {
         <article id="contact" className={`${this.props.article === 'contact' ? 'active' : ''} ${this.props.articleTimeout ? 'timeout' : ''}`} style={{display:'none'}}>
           <h2 className="major">Contact</h2>
           
-          <form type="hidden" method="POST" name="contact-form" data-netlify="true" Content-Type="application/x-www-form-urlencoded">
+          <form method="POST" name="contact-form" data-netlify="true" Content-Type="application/x-www-form-urlencoded">
             <div className="field half first">
               <label htmlFor="name">Name</label>
               <input type="text" name="name" id="name" />
@@ -83,7 +83,7 @@ class Main extends React.Component {
               data-netlify="true"
               netlify-honeypot="bot-field"
             >
-              <input hidden name="bot-field" />
+              <input type="hidden" name="form-name" />
               <input type="text" placeholder="name" name="name"/>
               <button>Send</button>
           </form>
