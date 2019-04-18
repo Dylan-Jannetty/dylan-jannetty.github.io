@@ -98,6 +98,25 @@
 			}
 
 		}
+		@include breakpoint(xlarge) {
+			article {
+				.aboutIMG {
+					height: 300px;
+					width: 300px;
+					margin-left: 8em;
+				}
+			}
+		}
+		
+		@include breakpoint(large) {
+			article {
+				.aboutIMG {
+					height: 300px;
+					width: 300px;
+					margin-left: 8em;
+				}
+			}
+		}
 
 		@include breakpoint(small) {
 			article {
