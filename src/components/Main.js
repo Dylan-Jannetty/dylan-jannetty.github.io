@@ -78,7 +78,7 @@ class Main extends React.Component {
           </form>
           <form
               className="botCatcher"
-              name="contact-form"
+              name="bot-form"
               method="post"
               data-netlify="true"
               netlify-honeypot="bot-field"
