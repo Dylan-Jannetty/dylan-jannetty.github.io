@@ -57,7 +57,8 @@ class Main extends React.Component {
 
         <article id="contact" className={`${this.props.article === 'contact' ? 'active' : ''} ${this.props.articleTimeout ? 'timeout' : ''}`} style={{display:'none'}}>
           <h2 className="major">Contact</h2>
-          <form method="post" name="contact-form" data-netlify="true">
+          
+          <form method="post" name="contact" action="#">
             <div className="field half first">
               <label htmlFor="name">Name</label>
               <input type="text" name="name" id="name" />
@@ -74,6 +75,17 @@ class Main extends React.Component {
               <li><input type="submit" value="Send Message" className="special" /></li>
               <li><input type="reset" value="Reset" /></li>
             </ul>
+          </form>
+          <form
+              className="botCatcher"
+              name="contact-form"
+              method="post"
+              data-netlify="true"
+              netlify-honeypot="bot-field"
+            >
+              <input hidden name="bot-field" />
+              <input type="text" placeholder="name" name="name"/>
+              <button>Send</button>
           </form>
           <ul className="icons">
             <li><a href="https://twitter.com/jannettysays" target="_blank" className="icon fa-twitter"><span className="label">Twitter</span></a></li>

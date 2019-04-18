@@ -7,10 +7,11 @@
 /* Form */
 
 	form {
+
 		$gutter: _size(element-margin) * 0.75;
 
 		margin: 0 0 (_size(element-margin) * 1.25) 0;
-
+		
 		.field {
 			margin: 0 0 ($gutter * 1) 0;
 
@@ -28,6 +29,7 @@
 		> .actions {
 			margin: ($gutter * 1.25) 0 0 0 !important;
 		}
+
 
 		@include breakpoint(small) {
 			.field {

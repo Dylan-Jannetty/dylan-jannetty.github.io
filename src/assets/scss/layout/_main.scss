@@ -32,6 +32,10 @@
 			border-radius: _size(border-radius);
 			opacity: 0;
 			
+			.botCatcher {
+				display: none;
+			}
+			
 			.aboutIMG {
 				height: 350px;
 				width: 350px;
