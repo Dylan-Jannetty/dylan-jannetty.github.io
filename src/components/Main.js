@@ -4,8 +4,6 @@ import PropTypes from 'prop-types'
 import pic01 from '../images/menssuit.jpg'
 import pic02 from '../images/code.jpg'
 import pic03 from '../images/aboutIMG.jpg'
-import tictac from '../images/tictac.jpg'
-import softball from '../images/softball.jpg'
 
 class Main extends React.Component {
   render() {
@@ -30,8 +28,8 @@ class Main extends React.Component {
           <span className="image main"><img src={pic02} alt="" /></span>
           <h3>Personal Projects</h3>
           <ul>
-            <a href="https://dylan-jannetty.github.io/djsTicTacToe/" target="_blank"><li>TIC TAC TOE</li></a>
-            <a href="https://dylan-jannetty.github.io/softball-client/" target="_blank"><li>SOFTBALL LEAGUE MANAGER(still in development)</li></a>
+            <a href="https://dylan-jannetty.github.io/djsTicTacToe/" rel="noopener noreferrer" target="_blank"><li>TIC TAC TOE</li></a>
+            <a href="https://dylan-jannetty.github.io/softball-client/" rel="noopener noreferrer" target="_blank"><li>SOFTBALL LEAGUE MANAGER(still in development)</li></a>
           </ul>
           <h3>Language/Frameworks/Libraries</h3>
           <ul>
@@ -58,7 +56,7 @@ class Main extends React.Component {
         <article id="contact" className={`${this.props.article === 'contact' ? 'active' : ''} ${this.props.articleTimeout ? 'timeout' : ''}`} style={{display:'none'}}>
           <h2 className="major">Contact</h2>
           
-          <form method="POST" name="contact-form" data-netlify="true" Content-Type="application/x-www-form-urlencoded">
+          <form method="POST" name="contact-form" data-netlify="true">
             <div className="field half first">
               <label htmlFor="name">Name</label>
               <input type="text" name="name" id="name" />
