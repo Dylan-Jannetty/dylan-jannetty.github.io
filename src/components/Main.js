@@ -88,10 +88,10 @@ class Main extends React.Component {
               <button>Send</button>
           </form>
           <ul className="icons">
-            <li><a href="https://twitter.com/jannettysays" target="_blank" className="icon fa-twitter"><span className="label">Twitter</span></a></li>
-            <li><a href="https://www.facebook.com/jannetty" target="_blank" className="icon fa-facebook"><span className="label">Facebook</span></a></li>
-            <li><a href="https://www.instagram.com/dylan_jannetty93/" target="_blank" className="icon fa-instagram"><span className="label">Instagram</span></a></li>
-            <li><a href="https://github.com/Dylan-Jannetty" target="_blank" className="icon fa-github"><span className="label">GitHub</span></a></li>
+            <li><a href="https://twitter.com/jannettysays" target="_blank" rel="noopener noreferrer" className="icon fa-twitter"><span className="label">Twitter</span></a></li>
+            <li><a href="https://www.facebook.com/jannetty" target="_blank" rel="noopener noreferrer" className="icon fa-facebook"><span className="label">Facebook</span></a></li>
+            <li><a href="https://www.instagram.com/dylan_jannetty93/" rel="noopener noreferrer" target="_blank" className="icon fa-instagram"><span className="label">Instagram</span></a></li>
+            <li><a href="https://github.com/Dylan-Jannetty" target="_blank" rel="noopener noreferrer" className="icon fa-github"><span className="label">GitHub</span></a></li>
           </ul>
           {close}
         </article>
