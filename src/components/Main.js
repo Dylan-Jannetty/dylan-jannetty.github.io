@@ -61,7 +61,7 @@ class Main extends React.Component {
             <textarea name="message"></textarea>
           </form>
           <form method="post" name="contact-form">
-          <input type="hidden" name="form-name" value="contact-form" />
+          <input type="hidden" name="contact-form" value="contact-form" />
             <div className="field half first">
               <label htmlFor="name">Name</label>
               <input type="text" name="name" id="name" />
