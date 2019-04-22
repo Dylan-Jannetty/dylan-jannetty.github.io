@@ -60,7 +60,7 @@ class Main extends React.Component {
             <input type="email" name="email" />
             <textarea name="message"></textarea>
           </form>
-          <form method="post" name="form-name" value="contact-form" data-netlify="true" data-netlify-honeypot="bot-field">
+          <form method="post" name="contact-form" value="contact-form" data-netlify="true" data-netlify-honeypot="bot-field">
           <input type="hidden" name="form-name" value="contact-form" />
             <div className="field half first">
               <label htmlFor="name">Name</label>
