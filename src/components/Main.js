@@ -38,7 +38,7 @@ handleChange = e => this.setState({ [e.target.name]: e.target.value });
   render() {
 
     let close = <div className="close" onClick={() => {this.props.onCloseArticle()}}></div>
-    const {name, email, message}
+    const {name, email, message} = this.state;
     
     return (
       <div ref={this.props.setWrapperRef} id="main" style={this.props.timeout ? {display: 'flex'} : {display: 'none'}}>
