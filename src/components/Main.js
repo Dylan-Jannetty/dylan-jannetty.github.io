@@ -5,6 +5,8 @@ import pic01 from '../images/menssuit.jpg'
 import pic02 from '../images/code.jpg'
 import pic03 from '../images/aboutIMG.jpg'
 
+<script type="text/babel">
+
 const encode = (data) => {
   return Object.keys(data)
       .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
@@ -94,7 +96,7 @@ handleChange = e => this.setState({ [e.target.name]: e.target.value });
           // </form>
           
           
-          <form onSubmit={this.handleSubmit}>
+          <form onSubmit={this.handleSubmit} netlify>
           // <input type="hidden" name="form-name" value="contact-form" />
             <div className="field half first">
               <label htmlFor="name">Name</label>
