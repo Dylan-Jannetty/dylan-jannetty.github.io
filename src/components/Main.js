@@ -16,10 +16,10 @@ class Main extends React.Component {
         <article id="intro" className={`${this.props.article === 'intro' ? 'active' : ''} ${this.props.articleTimeout ? 'timeout' : ''}`} style={{display:'none'}}>
           <h2 className="major">Experience</h2>
           <span className="image main"><img src={pic01} alt="" /></span>
-          <h3>General Assembly</h3>
-          <p>March 2018 - June 2018<br />Completed 3 month immersive program for web development</p>
           <h3>SportsHubTech</h3>
           <p>June 2018 - Current<br />Developing professional sports applications</p>
+          <h3>General Assembly</h3>
+          <p>March 2018 - June 2018<br />Completed 3 month immersive program for web development</p>
           {close}
         </article>
 
