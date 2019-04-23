@@ -5,6 +5,12 @@ import pic01 from '../images/menssuit.jpg'
 import pic02 from '../images/code.jpg'
 import pic03 from '../images/aboutIMG.jpg'
 
+const encode = (data) => {
+  return Object.keys(data)
+      .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
+      .join("&");
+}
+
 class Main extends React.Component {
   constructor(props) {
     super(props);
