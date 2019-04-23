@@ -6,34 +6,10 @@ import pic02 from '../images/code.jpg'
 import pic03 from '../images/aboutIMG.jpg'
 
 class Main extends React.Component {
-  constructor(props) {
-    super(props);
-    
-    this.state = {
-      name: "",
-      email: "",
-      message: ""
-    };
-  }
-  
-  handleSubmit = e => {
-  fetch("/", {
-    method: "POST",
-    headers: { "Content-Type": "application/x-www-form-urlencoded" },
-    body: encode({ "form-name": "contact", ...this.state })
-  })
-    .then(() => alert("Success!"))
-    .catch(error => alert(error));
-
-  e.preventDefault();
-};
-
-handleChange = e => this.setState({ [e.target.name]: e.target.value });
   render() {
 
     let close = <div className="close" onClick={() => {this.props.onCloseArticle()}}></div>
-    const {name, email, message}
-    
+
     return (
       <div ref={this.props.setWrapperRef} id="main" style={this.props.timeout ? {display: 'flex'} : {display: 'none'}}>
 
