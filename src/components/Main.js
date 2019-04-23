@@ -76,7 +76,7 @@ class Main extends React.Component {
                 name="email"
                 id="email"
                 required
-                
+                pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"
               />
             </div>
             <div className="field file">
@@ -90,8 +90,8 @@ class Main extends React.Component {
               <textarea name="message" id="message" rows="6" required minlength="6" />
             </div>
             <div className="field submit">
-            <input type="submit" value="Send Message" className="special" />
-            <input type="reset" value="Reset" />
+              <input type="submit" value="Send Message" />
+              <input type="reset" value="Reset" />
             </div>
             <input type="hidden" name="form-name" value="contact" />
             <input type="hidden" name="bot-field" />
