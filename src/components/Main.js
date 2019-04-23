@@ -56,72 +56,48 @@ class Main extends React.Component {
         <article id="contact" className={`${this.props.article === 'contact' ? 'active' : ''} ${this.props.articleTimeout ? 'timeout' : ''}`} style={{display:'none'}}>
           <h2 className="major">Contact</h2>
           <form
-  name="contact"
-  method="post"
-  data-netlify="true"
-  data-netlify-honeypot="bot-field"
->
-  <div className="field name">
-    <label htmlFor="name">
-      Name <span>*</span>
-    </label>
-    <input type="text" name="name" id="name" required minlength="2" />
-  </div>
-  <div className="field email">
-    <label htmlFor="email">
-      Email <span>*</span>
-    </label>
-    <input
-      type="text"
-      name="email"
-      id="email"
-      required
-      pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"
-    />
-  </div>
-  <div className="field file">
-    <label htmlFor="file">File</label>
-    <input type="file" name="file" id="file" />
-  </div>
-  <div className="field message">
-    <label htmlFor="message">
-      Message <span>*</span>
-    </label>
-    <textarea name="message" id="message" rows="6" required minlength="6" />
-  </div>
-  <div className="field submit">
-    <input type="submit" value="Send Message" />
-  </div>
-  <input type="hidden" name="form-name" value="contact" />
-  <input type="hidden" name="bot-field" />
-</form>
+            name="contact"
+            method="post"
+            data-netlify="true"
+            data-netlify-honeypot="bot-field"
+          >
+            <div className="field name">
+              <label htmlFor="name">
+                Name <span>*</span>
+              </label>
+              <input type="text" name="name" id="name" required minlength="2" />
+            </div>
+            <div className="field email">
+              <label htmlFor="email">
+                Email <span>*</span>
+              </label>
+              <input
+                type="text"
+                name="email"
+                id="email"
+                required
+                pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"
+              />
+            </div>
+            <div className="field file">
+              <label htmlFor="file">File</label>
+              <input type="file" name="file" id="file" />
+            </div>
+            <div className="field message">
+              <label htmlFor="message">
+                Message <span>*</span>
+              </label>
+              <textarea name="message" id="message" rows="6" required minlength="6" />
+            </div>
+            <div className="field submit">
+            <li><input type="submit" value="Send Message" className="special" /></li>
+            <li><input type="reset" value="Reset" /></li>
+            </div>
+            <input type="hidden" name="form-name" value="contact" />
+            <input type="hidden" name="bot-field" />
+          </form>
 
-  // <form name="contact" method="post" data-netlify="true" data-netlify-honeypot="bot-field">        
-  // <input type="hidden" name="form-name" value="contact" /> 
-  // <input type="hidden" name="bot-field" />
-  // </form>
-  // 
-  // 
-  //         <form method="post" name="contact-form" value="contact-form" data-netlify="true" data-netlify-honeypot="bot-field">
-  //         <input type="hidden" name="form-name" value="contact-form" />
-  //           <div className="field half first">
-  //             <label htmlFor="name">Name</label>
-  //             <input type="text" name="name" id="name" />
-  //           </div>
-  //           <div className="field half">
-  //             <label htmlFor="email">Email</label>
-  //             <input type="email" name="email" id="email" />
-  //           </div>
-  //           <div className="field">
-  //             <label htmlFor="message">Message</label>
-  //             <textarea name="message" id="message" rows="4"></textarea>
-  //           </div>
-  //           <div data-netlify-recaptcha="true"></div>
-  //           <ul className="actions">
-  //             <li><input type="submit" value="Send Message" className="special" /></li>
-  //             <li><input type="reset" value="Reset" /></li>
-  //           </ul>
-  //         </form>
+
 
           <ul className="icons">
             <li><a href="https://twitter.com/jannettysays" target="_blank" rel="noopener noreferrer" className="icon fa-twitter"><span className="label">Twitter</span></a></li>
