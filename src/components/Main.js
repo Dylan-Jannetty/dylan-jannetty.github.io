@@ -65,7 +65,7 @@ class Main extends React.Component {
           
           
           <form method="post" name="contact-form" value="contact-form" data-netlify="true" data-netlify-honeypot="bot-field">
-          // <input type="hidden" name="form-name" value="contact-form" />
+          <input type="hidden" name="form-name" value="contact-form" />
             <div className="field half first">
               <label htmlFor="name">Name</label>
               <input type="text" name="name" id="name" />
