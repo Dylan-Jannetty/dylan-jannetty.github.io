@@ -76,7 +76,7 @@ class Main extends React.Component {
                 name="email"
                 id="email"
                 required
-              
+                pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"
               />
             </div>
             <div className="field file">
