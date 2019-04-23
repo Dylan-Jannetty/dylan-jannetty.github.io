@@ -6,10 +6,34 @@ import pic02 from '../images/code.jpg'
 import pic03 from '../images/aboutIMG.jpg'
 
 class Main extends React.Component {
+  constructor(props) {
+    super(props);
+    
+    this.state = {
+      name: "",
+      email: "",
+      message: ""
+    };
+  }
+  
+  handleSubmit = e => {
+  fetch("/", {
+    method: "POST",
+    headers: { "Content-Type": "application/x-www-form-urlencoded" },
+    body: encode({ "form-name": "contact", ...this.state })
+  })
+    .then(() => alert("Success!"))
+    .catch(error => alert(error));
+
+  e.preventDefault();
+};
+
+handleChange = e => this.setState({ [e.target.name]: e.target.value });
   render() {
 
     let close = <div className="close" onClick={() => {this.props.onCloseArticle()}}></div>
-
+    const {name, email, message}
+    
     return (
       <div ref={this.props.setWrapperRef} id="main" style={this.props.timeout ? {display: 'flex'} : {display: 'none'}}>
 
@@ -55,24 +79,28 @@ class Main extends React.Component {
 
         <article id="contact" className={`${this.props.article === 'contact' ? 'active' : ''} ${this.props.articleTimeout ? 'timeout' : ''}`} style={{display:'none'}}>
           <h2 className="major">Contact</h2>
-          <form name="form-name" netlify netlify-honeypot="bot-field" hidden>
-            <input type="text" name="name" />
-            <input type="email" name="email" />
-            <textarea name="message"></textarea>
-          </form>
-          <form method="post" name="contact-form" value="contact-form" data-netlify="true" data-netlify-honeypot="bot-field">
+          
+
+          // <form name="form-name" netlify netlify-honeypot="bot-field" hidden>
+          //   <input type="text" name="name" />
+          //   <input type="email" name="email" />
+          //   <textarea name="message"></textarea>
+          // </form>
+          
+          
+          <form onSubmit={this.handleSubmit}>
           // <input type="hidden" name="form-name" value="contact-form" />
             <div className="field half first">
               <label htmlFor="name">Name</label>
-              <input type="text" name="name" id="name" />
+              <input type="text" name="name" id="name" value={name} onChange={this.handleChange}/>
             </div>
             <div className="field half">
               <label htmlFor="email">Email</label>
-              <input type="email" name="email" id="email" />
+              <input type="email" name="email" value={email} onChange={this.handleChange} id="email" />
             </div>
             <div className="field">
               <label htmlFor="message">Message</label>
-              <textarea name="message" id="message" rows="4"></textarea>
+              <textarea name="message" id="message" rows="4" value={message} onChange={this.handleChange}></textarea>
             </div>
             <div data-netlify-recaptcha="true"></div>
             <ul className="actions">
