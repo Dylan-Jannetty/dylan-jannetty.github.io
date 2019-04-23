@@ -5,12 +5,6 @@ import pic01 from '../images/menssuit.jpg'
 import pic02 from '../images/code.jpg'
 import pic03 from '../images/aboutIMG.jpg'
 
-const encode = (data) => {
-  return Object.keys(data)
-      .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
-      .join("&");
-}
-
 class Main extends React.Component {
   constructor(props) {
     super(props);
@@ -38,7 +32,7 @@ handleChange = e => this.setState({ [e.target.name]: e.target.value });
   render() {
 
     let close = <div className="close" onClick={() => {this.props.onCloseArticle()}}></div>
-    const {name, email, message} = this.state;
+    const {name, email, message}
     
     return (
       <div ref={this.props.setWrapperRef} id="main" style={this.props.timeout ? {display: 'flex'} : {display: 'none'}}>
@@ -94,19 +88,19 @@ handleChange = e => this.setState({ [e.target.name]: e.target.value });
           </form>
           
           
-          <form onSubmit={this.handleSubmit} name="form-name" netlify>
+          <form method="post" name="contact-form" value="contact-form" data-netlify="true" data-netlify-honeypot="bot-field">
           // <input type="hidden" name="form-name" value="contact-form" />
             <div className="field half first">
               <label htmlFor="name">Name</label>
-              <input type="text" name="name" id="name" value={name} onChange={this.handleChange}/>
+              <input type="text" name="name" id="name" />
             </div>
             <div className="field half">
               <label htmlFor="email">Email</label>
-              <input type="email" name="email" value={email} onChange={this.handleChange} id="email" />
+              <input type="email" name="email" id="email" />
             </div>
             <div className="field">
               <label htmlFor="message">Message</label>
-              <textarea name="message" id="message" rows="4" value={message} onChange={this.handleChange}></textarea>
+              <textarea name="message" id="message" rows="4"></textarea>
             </div>
             <div data-netlify-recaptcha="true"></div>
             <ul className="actions">
