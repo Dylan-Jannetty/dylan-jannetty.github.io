@@ -87,14 +87,14 @@ handleChange = e => this.setState({ [e.target.name]: e.target.value });
           <h2 className="major">Contact</h2>
           
 
-          // <form name="form-name" netlify netlify-honeypot="bot-field" hidden>
-          //   <input type="text" name="name" />
-          //   <input type="email" name="email" />
-          //   <textarea name="message"></textarea>
-          // </form>
+          <form name="form-name" netlify netlify-honeypot="bot-field" hidden>
+            <input type="text" name="name" />
+            <input type="email" name="email" />
+            <textarea name="message"></textarea>
+          </form>
           
           
-          <form onSubmit={this.handleSubmit} netlify>
+          <form onSubmit={this.handleSubmit} name="form-name" netlify>
           // <input type="hidden" name="form-name" value="contact-form" />
             <div className="field half first">
               <label htmlFor="name">Name</label>
