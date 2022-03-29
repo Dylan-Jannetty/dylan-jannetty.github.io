@@ -16,9 +16,11 @@ class Main extends React.Component {
         <article id="intro" className={`${this.props.article === 'intro' ? 'active' : ''} ${this.props.articleTimeout ? 'timeout' : ''}`} style={{display:'none'}}>
           <h2 className="major">Experience</h2>
           <span className="image main"><img src={pic01} alt="" /></span>
-          <h3>SportsHubTech</h3>
-          <p>June 2018 - Current<br />Developing professional sports applications</p>
+          <h3>Sharplink</h3>
+          <h5>Front-End Developer</h5>
+          <p>June 2018 - Current<br />Developing free-to-play fantasy and other sports gaming solutions. Working with the biggest names across professional sports leagues and media in the nation such as Turner Sports, Google, Facebook, NFL, NCAA, and NBA.</p>
           <h3>General Assembly</h3>
+          <h5>Student</h5>
           <p>March 2018 - June 2018<br />Completed 3 month immersive program for web development</p>
           {close}
         </article>
@@ -29,19 +31,19 @@ class Main extends React.Component {
           <h3>Personal Projects</h3>
           <ul>
             <a href="https://dylan-jannetty.github.io/djsTicTacToe/" rel="noopener noreferrer" target="_blank"><li>TIC TAC TOE</li></a>
-            <a href="https://dylan-jannetty.github.io/softball-client/" rel="noopener noreferrer" target="_blank"><li>SOFTBALL LEAGUE MANAGER(still in development)</li></a>
           </ul>
           <h3>Language/Frameworks/Libraries</h3>
           <ul>
-            <li>AngularJS</li>
+            <li>NextJs</li>
             <li>React</li>
+            <li>TypeScript</li>
+            <li>AngularJS</li>
             <li>Javascript</li>
             <li>Redux</li>
-            <li>Ruby On Rails</li>
             <li>Gatsbyjs</li>
             <li>Scss</li>
             <li>CSS</li>
-            <li>HTML</li>
+            <li>Styled-Components</li>
           </ul>
           {close}
         </article>
