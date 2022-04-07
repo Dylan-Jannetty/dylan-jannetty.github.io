@@ -67,7 +67,7 @@ class Main extends React.Component {
               <label htmlFor="name">
                 Name <span>*</span>
               </label>
-              <input type="text" name="name" id="name" required minlength="2" />
+              <input type="text" name="name" id="name" required minLength={2} />
             </div>
             <div className="field email">
               <label htmlFor="email">
@@ -78,7 +78,7 @@ class Main extends React.Component {
                 name="email"
                 id="email"
                 required
-                pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"
+                // pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"
               />
             </div>
             <div className="field file">
@@ -89,7 +89,7 @@ class Main extends React.Component {
               <label htmlFor="message">
                 Message <span>*</span>
               </label>
-              <textarea name="message" id="message" rows="6" required minlength="6" />
+              <textarea name="message" id="message" rows="6" required minLength={6} />
             </div>
             <div className="field submit">
               <input type="submit" value="Send Message" />

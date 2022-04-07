@@ -14,10 +14,10 @@ const Header = (props) => (
         </div>
         <nav>
             <ul>
-                <li><a href="javascript:;" onClick={() => {props.onOpenArticle('intro')}}>Experience</a></li>
-                <li><a href="javascript:;" onClick={() => {props.onOpenArticle('work')}}>Work</a></li>
-                <li><a href="javascript:;" onClick={() => {props.onOpenArticle('about')}}>About Me</a></li>
-                <li><a href="javascript:;" onClick={() => {props.onOpenArticle('contact')}}>Contact</a></li>
+                <li><a href="#" onClick={() => {props.onOpenArticle('intro')}}>Experience</a></li>
+                <li><a href="#" onClick={() => {props.onOpenArticle('work')}}>Work</a></li>
+                <li><a href="#" onClick={() => {props.onOpenArticle('about')}}>About Me</a></li>
+                <li><a href="#" onClick={() => {props.onOpenArticle('contact')}}>Contact</a></li>
             </ul>
         </nav>
     </header>
