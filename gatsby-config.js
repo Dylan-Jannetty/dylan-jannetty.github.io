@@ -1,8 +1,8 @@
 module.exports = {
   siteMetadata: {
     title: "Dylan Jannetty Portfolio",
-    author: "Hunter Chang",
-    description: "A Gatsby.js V2 Starter based on Dimension by HTML5 UP"
+    author: "Dylan Jannetty",
+    description: "Dylan Jannetty's Portfolio"
   },
   plugins: [
     'gatsby-plugin-react-helmet',
